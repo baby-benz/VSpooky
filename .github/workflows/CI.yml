@@ -21,3 +21,4 @@ jobs:
         npm test
       env:
         CI: true
+        CODECOV_TOKEN: "e3fb216d-2ec8-43a8-9ec6-45e630a96879"
