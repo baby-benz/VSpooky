@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.com/baby-benz/VSpooky.svg?branch=master)](https://travis-ci.com/baby-benz/VSpooky)
-[![Node version](https://img.shields.io/node/v/ts-loader.svg?style=flat)](https://api.npmjs.org/downloads/range/)
+[![npm version](https://badge.fury.io/js/ts-loader.svg)](https://badge.fury.io/js/ts-loader)
+[![Known Vulnerabilities](https://snyk.io/test/github/baby-benz/VSpooky/badge.svg)](https://snyk.io/test/github/baby-benz/VSpooky)
 [![devDependencies Status](https://david-dm.org/baby-benz/VSpooky/dev-status.svg)](https://david-dm.org/baby-benz/VSpooky?type=dev)
 # vspooky README
 
