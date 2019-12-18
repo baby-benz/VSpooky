@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.com/baby-benz/VSpooky.svg?branch=master)](https://travis-ci.com/baby-benz/VSpooky)
 [![Node version](https://img.shields.io/node/v/[NPM-MODULE-NAME].svg?style=flat)](http://nodejs.org/download/)
+[![devDependencies Status](https://david-dm.org/baby-benz/VSpooky/dev-status.svg)](https://david-dm.org/baby-benz/VSpooky?type=dev)
 # vspooky README
 
 This is the README for your extension "vspooky". After writing up a brief description, we recommend including the following sections.
