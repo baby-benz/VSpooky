@@ -13,7 +13,7 @@ export function activate(context: vscode.ExtensionContext) {
 	//For buttons
 	init(context);
 
-	let disposable = vscode.commands.registerCommand('extension.refreshButtons', () => {
+	let disposable = vscode.commands.registerCommand('extension.displayAll', () => {
 		// The code you place here will be executed every time your command is executed
 
 		//For buttons
