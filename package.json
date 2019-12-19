@@ -10,8 +10,9 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"*"
 	],
+	"main": "./out/extension.js",
 	"private": true,
 	"contributes": {
 		"commands": [
@@ -19,6 +20,41 @@
 				"command": "extension.helloWorld",
 				"title": "Hello World"
 			}
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "vscode-spotify",
+					"title": "vscode-spotify",
+					"icon": "resources/logo.png"
+				}
+			]
+		},
+		"views": {
+			"vscode-spotify": [
+				{
+					"id": "vscode-spotify-playlists",
+					"name": "Playlists"
+				},
+				{
+					"id": "vscode-spotify-tracks",
+					"name": "Tracks"
+				}
+			]
+		}
+	},
+	"menus": {
+		"view/title": [
+	  		{
+			"command": "spotify.loadPlaylists",
+			"when": "view == vscode-spotify-playlists",
+			"group": "navigation"
+	  		},
+	  		{
+			"command": "spotify.loadTracks",
+			"when": "view == vscode-spotify-tracks",
+			"group": "navigation"
+	  		}
 		]
 	},
 	"scripts": {
@@ -39,11 +75,14 @@
 		"glob": "^7.1.5",
 		"mocha": "^6.2.2",
 		"ts-loader": "^6.2.1",
-		"tslint": "^5.20.0",
+		"tslint": "^5.20.1",
 		"typescript": "^3.7.3",
 		"vsce": "^1.71.0",
 		"vscode-test": "^1.3.0",
 		"webpack": "^4.41.3",
 		"webpack-cli": "^3.3.10"
+	},
+	"dependencies": {
+		"path": "^0.12.7"
 	}
 }
