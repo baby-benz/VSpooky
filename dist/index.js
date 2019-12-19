@@ -93,20 +93,20 @@
 /*! exports provided: activate, deactivate */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"activate\", function() { return activate; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"deactivate\", function() { return deactivate; });\n/* harmony import */ var vscode__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vscode */ \"vscode\");\n/* harmony import */ var vscode__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vscode__WEBPACK_IMPORTED_MODULE_0__);\n// The module 'vscode' contains the VS Code extensibility API\r\n// Import the module and reference it with the alias vscode in your code below\r\n\r\n// this method is called when your extension is activated\r\n// your extension is activated the very first time the command is executed\r\nfunction activate(context) {\r\n    // Use the console to output diagnostic information (console.log) and errors (console.error)\r\n    // This line of code will only be executed once when your extension is activated\r\n    console.log('Congratulations, your extension \"vspooky\" is now active!');\r\n    // The command has been defined in the package.json file\r\n    // Now provide the implementation of the command with registerCommand\r\n    // The commandId parameter must match the command field in package.json\r\n    var disposable = vscode__WEBPACK_IMPORTED_MODULE_0__[\"commands\"].registerCommand('extension.helloWorld', function () {\r\n        // The code you place here will be executed every time your command is executed\r\n        // Display a message box to the user\r\n        vscode__WEBPACK_IMPORTED_MODULE_0__[\"window\"].showInformationMessage('Hello World!');\r\n    });\r\n    context.subscriptions.push(disposable);\r\n}\r\n// this method is called when your extension is deactivated\r\nfunction deactivate() { }\r\n\n\n//# sourceURL=webpack:///./src/extension.ts?");
-
-/***/ }),
-
-/***/ "vscode":
-/*!*************************!*\
-  !*** external "vscode" ***!
-  \*************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = require(\"vscode\");\n\n//# sourceURL=webpack:///external_%22vscode%22?");
-
-/***/ })
-
-/******/ });
+    "use strict";
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"activate\", function() { return activate; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"deactivate\", function() { return deactivate; });\n/* harmony import */ var vscode__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vscode */ \"vscode\");\n/* harmony import */ var vscode__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vscode__WEBPACK_IMPORTED_MODULE_0__);\n// The module 'vscode' contains the VS Code extensibility API\r\n// Import the module and reference it with the alias vscode in your code below\r\n\r\n// this method is called when your extension is activated\r\n// your extension is activated the very first time the command is executed\r\nfunction activate(context) {\r\n    // Use the console to output diagnostic information (console.log) and errors (console.error)\r\n    // This line of code will only be executed once when your extension is activated\r\n    console.log('Congratulations, your extension \"vspooky\" is now active!');\r\n    // The command has been defined in the package.json file\r\n    // Now provide the implementation of the command with registerCommand\r\n    // The commandId parameter must match the command field in package.json\r\n    var disposable = vscode__WEBPACK_IMPORTED_MODULE_0__[\"commands\"].registerCommand('extension.helloWorld', function () {\r\n        // The code you place here will be executed every time your command is executed\r\n        // Display a message box to the user\r\n        vscode__WEBPACK_IMPORTED_MODULE_0__[\"window\"].showInformationMessage('Hello World!');\r\n    });\r\n    context.subscriptions.push(disposable);\r\n}\r\n// this method is called when your extension is deactivated\r\nfunction deactivate() { }\r\n\n\n//# sourceURL=webpack:///./src/extension.ts?");
+    
+    /***/ }),
+    
+    /***/ "vscode":
+    /*!*************************!*\
+      !*** external "vscode" ***!
+      \*************************/
+    /*! no static exports found */
+    /***/ (function(module, exports) {
+    
+    eval("module.exports = require(\"vscode\");\n\n//# sourceURL=webpack:///external_%22vscode%22?");
+    
+    /***/ })
+    
+    /******/ });

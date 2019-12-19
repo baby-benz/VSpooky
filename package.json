@@ -1,7 +1,7 @@
 {
-	"name": "vspooky",
-	"displayName": "VSpooky",
-	"description": "Spooky Spoty Player",
+	"name": "VSPooky",
+	"displayName": "Spoky Spotify Player",
+	"description": "Player",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.41.0"
@@ -10,26 +10,23 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"*"
 	],
-	"private": true,
+	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "extension.refreshButtons",
+				"title": "show buttons"
 			}
 		]
 	},
 	"scripts": {
-		"vscode:prepublish": "webpack --mode production",
-		"prebuild": "npm install",
-		"webpack": "webpack --mode development",
-		"webpack-watch": "webpack --mode development --watch",
+		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
-		"pretest": "yarn run compile",
-		"test": "tsc ./src/test/runTest.ts"
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
@@ -38,12 +35,12 @@
 		"@types/vscode": "^1.41.0",
 		"glob": "^7.1.5",
 		"mocha": "^6.2.2",
-		"ts-loader": "^6.2.1",
+		"typescript": "^3.6.4",
 		"tslint": "^5.20.0",
-		"typescript": "^3.7.3",
-		"vsce": "^1.71.0",
-		"vscode-test": "^1.3.0",
-		"webpack": "^4.41.3",
-		"webpack-cli": "^3.3.10"
+		"vscode-test": "^1.2.2"
+	},
+	"dependencies": {
+		"@types/express": "^4.17.2",
+		"spotify-web-api-js": "^1.2.0"
 	}
 }

@@ -1,13 +1,13 @@
 // import { buildConfigFromPackageJson } from './packageJson'
 import * as vscode from 'vscode';
 import { RunButton } from './types';
-import * as path from 'path';
+// import * as path from 'path';
 
-const registerCommand = vscode.commands.registerCommand;
+// const registerCommand = vscode.commands.registerCommand;
 
 const disposables: any[] = [];
 
-const init = async (context: vscode.ExtensionContext) => {
+const init = async (_context: vscode.ExtensionContext) => {
 	disposables.forEach(d => d.dispose());
 	const config = vscode.workspace.getConfiguration('actionButtons');
 	const defaultColor = config.get<string>('defaultColor');
