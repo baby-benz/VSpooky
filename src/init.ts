@@ -1,9 +1,9 @@
 // import { buildConfigFromPackageJson } from './packageJson'
 import * as vscode from 'vscode';
 import { RunButton } from './types';
-import * as path from 'path';
+// import * as path from 'path';
 
-const registerCommand = vscode.commands.registerCommand;
+// const registerCommand = vscode.commands.registerCommand;
 
 const disposables: any[] = [];
 
@@ -14,22 +14,15 @@ const init = async (_context: vscode.ExtensionContext) => {
 	const reloadButton = config.get<string>('reloadButton');
 	const playButton = config.get<string>('playButton');
 	const pauseButton = config.get<string>('pauseButton');
-
-	if (reloadButton !== null) {
-		loadButton({
-			vsCommand: 'extension.refreshButtons',
-			name: reloadButton || '↻',
-			color: defaultColor || 'white',
-			command: 'Refreshes the action buttons'
-		});
-	}
+	const nextButton = config.get<string>('nextButton');
+	const unrepeatButton = config.get<string>('unrepeatButton');
 
 	if (playButton !== null) {
 		loadButton({
 			vsCommand: 'extension.playButtons',
-			name: reloadButton || '←',
+			name: reloadButton || '▷',
 			color: defaultColor || '#ff9900',
-			command: 'Plays the action buttons'
+			command: 'Play music'
 		});
 	}
 
@@ -38,10 +31,36 @@ const init = async (_context: vscode.ExtensionContext) => {
 			vsCommand: 'extension.pauseButtons',
 			name: reloadButton || '||',
 			color: defaultColor || '#99ff00',
-			command: 'Stops the action buttons'
+			command: 'Stop music playback'
 		});
 	}
-	
+
+	if (nextButton !== null) {
+		loadButton({
+			vsCommand: 'extension.nextButtons',
+			name: reloadButton || '→',
+			color: defaultColor || '#99ff00',
+			command: 'next track'
+		});
+	}
+
+	if (reloadButton !== null) {
+		loadButton({
+			vsCommand: 'extension.refreshButtons',
+			name: reloadButton || '⇆',
+			color: defaultColor || 'green',
+			command: 'Repeat playlist'
+		});
+	}
+
+	if (unrepeatButton !== null) {
+		loadButton({
+			vsCommand: 'extension.unrepeatingButtons',
+			name: reloadButton || '⇆',
+			color: defaultColor || 'white',
+			command: 'off repeat mode'
+		});
+	}
 };
 
 function loadButton({
