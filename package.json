@@ -30,17 +30,24 @@
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
+		"@types/jquery": "^3.3.31",
 		"@types/mocha": "^5.2.7",
 		"@types/node": "^12.11.7",
 		"@types/vscode": "^1.41.0",
 		"glob": "^7.1.5",
 		"mocha": "^6.2.2",
-		"typescript": "^3.6.4",
 		"tslint": "^5.20.0",
+		"typescript": "^3.6.4",
 		"vscode-test": "^1.2.2"
 	},
 	"dependencies": {
 		"@types/express": "^4.17.2",
+		"@types/jsdom": "^12.2.4",
+		"@types/shelljs": "^0.8.6",
+		"bootstrap-daterangepicker": "^3.0.5",
+		"jquery": "^3.4.1",
+		"node-cmd": "^3.0.0",
+		"shelljs": "^0.8.3",
 		"spotify-web-api-js": "^1.2.0"
 	}
 }

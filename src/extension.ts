@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import { play, pause, refresh } from './controllers/control';
+import SpotifyWebApi, * as spotifyWebApi from 'spotify-web-api-js';
 //For button
 import init from './init';
 
@@ -13,29 +14,21 @@ export function activate(context: vscode.ExtensionContext) {
 	//For buttons
 	init(context);
 
-	let disposable = vscode.commands.registerCommand('extension.reloadButtons', () => {
-		// The code you place here will be executed every time your command is executed
-
-		//For buttons
-		init(context);
-		
-		// Display a message box to the user
-		// vscode.window.showInformationMessage('Hello World!');
-
-		//Use it for creating new treeView
-		// const playlistTreeView = vscode.window.createTreeView('vscode-spotify-playlists', { treeDataProvider: new TreePlaylistProvider() });
-    	// const treeTrackProvider = new TreeTrackProvider();
-    	// const trackTreeView = vscode.window.createTreeView('vscode-spotify-tracks', { treeDataProvider: treeTrackProvider });
-		// treeTrackProvider.bindView(trackTreeView);
-	});
+	// var spotifyApi = new SpotifyWebApi(); 
+	let token: string = 'BQB4x0RuN3HK9iQhcre4eXRW1eENNb-CN2Si5us6IUYqysh930pOXLa2AjR-2F4lMYU9w8pjTZrFE2HHP8Np7MQvCfzLF8UhQHGkPnsMF_ETI2xYMlD1I77VcLnRCbf7rtrfbweZUDMjDgJMDMYAgemozIr9SHcmEHR_HBA"';
+	// spotifyApi.setAccessToken(token);
+	
+	//play music in app
 	vscode.commands.registerCommand('extension.playButtons', () => {
 		
-		play();
+		play(token);
 
 	});
+
+	//pause music in app
 	vscode.commands.registerCommand('extension.pauseButtons', () => {
 		
-		pause();
+		pause(token);
 
 	});
 	vscode.commands.registerCommand('extension.refreshButtons', () => {
@@ -43,5 +36,18 @@ export function activate(context: vscode.ExtensionContext) {
 		refresh();
 
 	});
+
+
+	let disposable = vscode.commands.registerCommand('extension.reloadButtons', () => {
+
+		//For buttons
+		init(context);
+		//Use it for creating new treeView
+		// const playlistTreeView = vscode.window.createTreeView('vscode-spotify-playlists', { treeDataProvider: new TreePlaylistProvider() });
+    	// const treeTrackProvider = new TreeTrackProvider();
+    	// const trackTreeView = vscode.window.createTreeView('vscode-spotify-tracks', { treeDataProvider: treeTrackProvider });
+		// treeTrackProvider.bindView(trackTreeView);
+	});
+
 	context.subscriptions.push(disposable);
 }
