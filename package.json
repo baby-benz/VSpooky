@@ -45,16 +45,16 @@
 	},
 	"menus": {
 		"view/title": [
-	  		{
-			"command": "spotify.loadPlaylists",
-			"when": "view == vscode-spotify-playlists",
-			"group": "navigation"
-	  		},
-	  		{
-			"command": "spotify.loadTracks",
-			"when": "view == vscode-spotify-tracks",
-			"group": "navigation"
-	  		}
+			{
+				"command": "spotify.loadPlaylists",
+				"when": "view == vscode-spotify-playlists",
+				"group": "navigation"
+			},
+			{
+				"command": "spotify.loadTracks",
+				"when": "view == vscode-spotify-tracks",
+				"group": "navigation"
+			}
 		]
 	},
 	"scripts": {
