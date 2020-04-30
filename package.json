@@ -85,7 +85,7 @@
 		"@types/shelljs": "^0.8.6",
 		"autobind-decorator": "^2.4.0",
 		"bootstrap-daterangepicker": "^3.0.5",
-		"jquery": "^3.4.1",
+		"jquery": "^3.5.0",
 		"node-cmd": "^3.0.0",
 		"shelljs": "^0.8.3",
 		"spotify-web-api-js": "^1.2.0"
